@@ -1,0 +1,35 @@
+<script>
+  (function () {
+    var nav = document.querySelector(".masthead .greedy-nav");
+    var themeCss = document.getElementById("theme-css");
+    if (!nav || !themeCss) return;
+
+    var button = document.createElement("button");
+    button.type = "button";
+    button.className = "theme-toggle";
+
+    function darkOn() {
+      return document.documentElement.getAttribute("data-theme") === "dark";
+    }
+
+    function paint() {
+      var dark = darkOn();
+      button.textContent = dark ? "Light" : "Dark";
+      button.setAttribute("aria-pressed", dark ? "true" : "false");
+      button.setAttribute("aria-label", dark ? "Switch to light theme" : "Switch to dark theme");
+    }
+
+    button.addEventListener("click", function () {
+      var next = darkOn() ? "light" : "dark";
+      document.documentElement.setAttribute("data-theme", next);
+      try { localStorage.setItem("theme", next); } catch (e) {}
+      themeCss.href = next === "dark" ? themeCss.getAttribute("data-dark") : themeCss.getAttribute("data-light");
+      paint();
+    });
+
+    paint();
+    var search = nav.querySelector(".search__toggle");
+    if (search) nav.insertBefore(button, search);
+    else nav.appendChild(button);
+  })();
+</script>
