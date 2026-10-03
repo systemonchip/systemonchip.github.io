@@ -1,9 +1,9 @@
 main:
-  - title: "글"
+  - title: "Posts"
     url: /posts/
-  - title: "분류"
+  - title: "Categories"
     url: /categories/
-  - title: "태그"
+  - title: "Tags"
     url: /tags/
-  - title: "소개"
+  - title: "About"
     url: /about/

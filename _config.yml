@@ -1,13 +1,13 @@
 title: systemonchip
 description: >-
-  systemonchip 블로그입니다.
+  A blog by systemonchip.
 url: "https://systemonchip.github.io"
 baseurl: ""
 repository: systemonchip/systemonchip.github.io
 github_username: systemonchip
 minimal_mistakes_skin: default
 search: true
-locale: ko
+locale: en-US
 timezone: Asia/Seoul
 
 markdown: kramdown
@@ -43,7 +43,7 @@ plugins:
 author:
   name: "systemonchip"
   avatar: "https://github.com/systemonchip.png"
-  bio: "systemonchip 블로그입니다."
+  bio: "A blog by systemonchip."
   links:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
