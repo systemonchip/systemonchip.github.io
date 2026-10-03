@@ -1,18 +1,25 @@
 .theme-toggle {
-  margin-inline-start: 0.75rem;
-  padding: 0.15rem 0.6rem;
-  border: 1px solid currentColor;
-  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-inline-start: 0.25rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
+  border: 0;
   background: transparent;
   color: #6f777d;
-  font-family: inherit;
-  font-size: 0.75rem;
-  line-height: 1.5;
   cursor: pointer;
 }
 
 html[data-theme="dark"] .theme-toggle {
-  color: #eaeaea;
+  color: #00adb5;
+}
+
+.theme-toggle__icon {
+  display: block;
+  width: 1.15rem;
+  height: 1.15rem;
 }
 
 .theme-toggle:hover {
